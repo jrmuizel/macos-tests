@@ -207,7 +207,7 @@ int main() {
           CGFloat size = CTFontGetSize(originalFont);
           CTFontDescriptorRef resultDescriptor = CTFontDescriptorCreateCopyWithAttributes(originalDescriptor, requestedAttributes);
           fflush(stdout);
-          CFShow(resultDescriptor);
+          //CFShow(resultDescriptor);
           CTFontRef resultFont = CTFontCreateWithFontDescriptor(resultDescriptor, size, nullptr);
           CFRelease(resultDescriptor);
 #endif
@@ -282,8 +282,8 @@ int main() {
           bool fontEqual = CFEqual(resultFont, testCase.font);
           printf("CFEqual(resultFont, originalFont): %s\n", fontEqual ? "true" : "false");
           fflush(stdout);
-          CFShow(resultFont);
-          CFShow(originalFont);
+          //CFShow(resultFont);
+          //CFShow(originalFont);
           
           printf("\n");
 
